@@ -218,6 +218,28 @@ module openconfig-platform-types {
     uses oc-types:min-max-time;
   }
 
+  grouping component-last-power-off-reason {
+    description
+      "Common grouping for recording the reason of a component's
+      power-off state";
+
+    leaf trigger {
+      type component-last-power-off-reason-trigger;
+      description
+        "Records the generic triggers, e.g. user or system
+        initiated the power-off.";
+    }
+
+    leaf details {
+      type string;
+      description
+        "Records detailed description of why the power-off happened.
+        For example, when system initiated the power-off, this leaf
+        can be used to record the specific reason, e.g. due to critical errors 
+        leading to bootloop on a controller-card ";
+    }
+  }
+
   grouping component-redundant-role-switchover-reason {
     description
       "Common grouping for recording the reason of a component's
