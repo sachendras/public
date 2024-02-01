@@ -531,6 +531,13 @@ module openconfig-platform {
         this reports the role of the component.";
     }
 
+    container last-poweroff-reason {
+      description
+        "Records last power-off reason for a componenet. ";
+
+      uses oc-platform-types:component-last-power-off-reason;
+    }
+
     container last-switchover-reason {
       description
         "For components that have redundant roles (e.g. two
