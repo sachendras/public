@@ -644,7 +644,7 @@ module openconfig-platform {
 
     }
 
-    leaf last-reboot-reason {
+    leaf last-reboot-reason { ....
       type identityref {
         base oc-platform-types:COMPONENT_REBOOT_REASON;
       }
